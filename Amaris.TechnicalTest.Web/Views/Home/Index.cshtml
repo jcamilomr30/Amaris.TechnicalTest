@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Employees</h1>
+
+
+<div class="row">
+    <label class="col-md-1">
+        id
+    </label>
+    <div class="col-md-6 ">
+        <input id="txtId" type="number" class="form-control" />
+    </div>
+    <div class="col-md-2 ">
+        <a id="btnSearch" class="btn btn-success">Search</a>
+    </div>
+</div>
+<div class="row">
+    <div class="table-responsive">
+        <table class="table" id="tbl">
+            <thead>
+                <tr>
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Age
+                    </th>
+                    <th>
+                        Salary
+                    </th>
+                    <th>
+                        Anual Salary
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+       
+        $(document).ready(function () {
+            $("#tbl").DataTable({
+                    "processing": true, // for show progress bar
+                    "serverSide": true, // for process server side
+                    //"filter": false, // this is for disable filter (search box)
+                    "orderMulti": false, // for disable multiple column at once
+                    "dom": '<"top"i>rt<"bottom"lp><"clear">', // for hide default global search box // little confusion? don't worry I explained in the tutorial website
+                    "ajax": {
+                        "url": "@Url.Action("Employees_Read", "Home")",
+                        "type": "POST",
+                        "datatype": "json"
+                    },
+                "columns": [
+                    { "data": "id", "name": "id", "autoWidth": true },
+                        { "data": "name", "name": "name", "autoWidth": true },
+                        { "data": "age", "name": "age", "autoWidth": true },
+                        { "data": "salary", "name": "salary", "autoWidth": true },
+                        { "data": "anualSalary", "name": "anualSalary", "autoWidth": true }
+                    ]
+                });
+
+                //Apply Custom search on jQuery DataTables here
+                oTable = $('#tbl').DataTable();
+                $('#btnSearch').click(function () {
+                    oTable.columns(0).search($('#txtId').val());
+
+                    //hit search on server
+                    oTable.draw();
+                });
+
+            });
+    </script>
+}

@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amaris.TechnicalTest.Web", "Amaris.TechnicalTest.Web\Amaris.TechnicalTest.Web.csproj", "{1145B378-F410-4B52-B7E3-A03CE5520302}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amaris.TechnicalTest.Core", "Amaris.TechnicalTest.Core\Amaris.TechnicalTest.Core.csproj", "{B43B839F-4052-433F-AFAA-562CEFA85C14}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amaris.TechnicalTest.Domain", "Amaris.TechnicalTest.Domain\Amaris.TechnicalTest.Domain.csproj", "{E07AFA72-FF6E-48C6-8827-9431EE934BE8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amaris.TechnicalTest.Infraestructure", "Amaris.TechnicalTest.Infraestructure\Amaris.TechnicalTest.Infraestructure.csproj", "{EEB849E5-E386-4879-8850-E76DD9158E5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{A7F3619A-95E9-4C5C-85BD-00F847E7A82D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amaris.TechnicalTest.Core.Test", "Amaris.TechnicalTest.Core.Test\Amaris.TechnicalTest.Core.Test.csproj", "{14FBD39A-880E-40DB-82DF-1B7DB7723F9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1145B378-F410-4B52-B7E3-A03CE5520302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1145B378-F410-4B52-B7E3-A03CE5520302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1145B378-F410-4B52-B7E3-A03CE5520302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1145B378-F410-4B52-B7E3-A03CE5520302}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B43B839F-4052-433F-AFAA-562CEFA85C14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B43B839F-4052-433F-AFAA-562CEFA85C14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B43B839F-4052-433F-AFAA-562CEFA85C14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B43B839F-4052-433F-AFAA-562CEFA85C14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E07AFA72-FF6E-48C6-8827-9431EE934BE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E07AFA72-FF6E-48C6-8827-9431EE934BE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E07AFA72-FF6E-48C6-8827-9431EE934BE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E07AFA72-FF6E-48C6-8827-9431EE934BE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEB849E5-E386-4879-8850-E76DD9158E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEB849E5-E386-4879-8850-E76DD9158E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEB849E5-E386-4879-8850-E76DD9158E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEB849E5-E386-4879-8850-E76DD9158E5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14FBD39A-880E-40DB-82DF-1B7DB7723F9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14FBD39A-880E-40DB-82DF-1B7DB7723F9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14FBD39A-880E-40DB-82DF-1B7DB7723F9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14FBD39A-880E-40DB-82DF-1B7DB7723F9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{14FBD39A-880E-40DB-82DF-1B7DB7723F9E} = {A7F3619A-95E9-4C5C-85BD-00F847E7A82D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC986B99-DC37-4718-8A0D-B7053E569FAD}
+	EndGlobalSection
+EndGlobal
