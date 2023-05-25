@@ -33,7 +33,8 @@ namespace Amaris.TechnicalTest.Core.Services
         {
             var response = await employeeManagerClient.GetAsync<EmployeeResponse>($"employee/{id}");
             var employee = mapper.Map<EmployeeDto>(response.employeeResponseDetail);
-            GetSalary(employee);
+            if (employee != default)
+                GetSalary(employee);
             return employee;
         }
 

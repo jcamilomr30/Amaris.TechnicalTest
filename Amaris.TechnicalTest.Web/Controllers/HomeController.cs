@@ -38,7 +38,15 @@ namespace Amaris.TechnicalTest.Web.Controllers
             int skip = start != null ? Convert.ToInt32(start) : 0;
             int recordsTotal = 0;
 
-            var data = id.HasValue ? new List<EmployeeDto>() { employeeService.GetEmployee(id.Value).Result } : employeeService.GetEmployees().Result;
+            var data = new List<EmployeeDto>();
+            if (id.HasValue)
+            {
+                var employee = employeeService.GetEmployee(id.Value).Result;
+                if (employee != default)
+                    data.Add(employee);
+            }
+            else
+                data = employeeService.GetEmployees().Result.ToList();
             //SORT
             if (!(string.IsNullOrEmpty(sortColumn) && string.IsNullOrEmpty(sortColumnDir)))
             {
